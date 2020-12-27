@@ -47,6 +47,18 @@ if(symb_yes === true){
   allowed_char=allowed_char.concat(symb)
 }
 console.log("Your password characters will be chose from this list:"+allowed_char);
+console.log(allowed_char);
+var ac_index = allowed_char.length-1;
+console.log(ac_index);
+
+function generatePassword(){
+  var pw = "";
+  for (var i = 1; i<=numbchar_i; i++){
+    var random = Math.floor(Math.random()*allowed_char.length);
+    pw += allowed_char[random];
+  }
+  return pw;
+}
 
 
 function writePassword() {
