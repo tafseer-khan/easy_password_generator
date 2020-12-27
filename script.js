@@ -9,14 +9,33 @@ var num = ["1","2","3","4","5","6","7","8","9","0"];
 // Denote symbols (24 chars)
 var symb =["!","@","#","$","%","^","&","(",")","_","-","+","+","<",",",".",">","/","?","`","~",":",";","'"];
 var allowed_char =ltrs;
-console.log(allowed_char);
-var upp_yes = confirm("Would you like to include upper case characters in your password?");
-console.log("You would like upper case letters: "+upp_yes);
-var num_yes = confirm("Would you like to include numbers in your password?");
-console.log("You would like numbers: "+num_yes);
-var symb_yes = confirm("Would you like to include symbols in your password?");
-console.log("You would like symbols: "+symb_yes);
-var numbchar_s = prompt("How many characters would you like in your password?")
+var secure = false;
+while (secure === false){
+  var upp_yes = confirm("Would you like to include upper case characters in your password?");
+  console.log("You would like upper case letters: "+upp_yes);
+  var num_yes = confirm("Would you like to include numbers in your password?");
+  console.log("You would like numbers: "+num_yes);
+  var symb_yes = confirm("Would you like to include symbols in your password?");
+  console.log("You would like symbols: "+symb_yes);
+  if (upp_yes === true || num_yes === true || symb_yes === true)
+    secure = true;
+  else{
+    confirm("Passwords require either upper case letters, numbers, or symbols. Please choose atleast one option.");
+  }
+}
+
+numcorrect = false;
+while (numcorrect === false){ 
+  var numbchar_s = prompt("How many characters would you like in your password?");
+  numbchar_i = parseInt(numbchar_s);
+    if (numbchar_i >= 8 && numbchar_i <= 128){
+      numcorrect = true;
+    }
+    else{
+      confirm("Please enter a numerical value between 8 and 128");
+    }
+}
+console.log("Number of characters desired in password: "+numbchar_i);
 
 if(upp_yes === true){
   allowed_char =allowed_char.concat(upp)
@@ -27,7 +46,7 @@ if(num_yes === true){
 if(symb_yes === true){
   allowed_char=allowed_char.concat(symb)
 }
-console.log(allowed_char);
+console.log("Your password characters will be chose from this list:"+allowed_char);
 
 
 function writePassword() {
