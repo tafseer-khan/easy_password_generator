@@ -10,6 +10,8 @@ var num = ["1","2","3","4","5","6","7","8","9","0"];
 var symb =["!","@","#","$","%","^","&","(",")","_","-","+","+","<",",",".",">","/","?","`","~",":",";","'"];
 var allowed_char =ltrs;
 var secure = false;
+confirm("Hello Welcome to Tafseer's Password Generator");
+confirm("Before we begin please make sure to read each dialog, if there is a selection you would like to readjust please press F5 (PC) or Command+R (Mac) to refresh the page");
 while (secure === false){
   var upp_yes = confirm("Would you like to include upper case characters in your password?");
   console.log("You would like upper case letters: "+upp_yes);
