@@ -15,4 +15,4 @@ If the user chooses a password length less than 8 characters, more than 128 char
 Once all prompts have been completed the "Your Secure Password" text will be replaced with your random password. 
 Once this has been displayed the user is allowed to highlight, and copy this value. 
 
-![alt text](https://github.com/[tafseer-khan]/[easy_password_generator]/blob/[Assets]/screenshot.png?raw=true)
+![Wesbite ScreenShot](https://github.com/tafseer-khan/easy_password_generator/blob/main/Assets/screenshot.png)
