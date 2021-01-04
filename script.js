@@ -82,3 +82,4 @@ function writePassword() {
 
 // Button will respond to a click
 generateBtn.addEventListener("click", writePassword);
+
